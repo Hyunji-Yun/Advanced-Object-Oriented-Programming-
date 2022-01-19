@@ -1,0 +1,44 @@
+//Given two input integers for an arrow body and arrowhead (respectively), print a right-facing arrow.
+#include <stdio.h>
+
+int main(void) {
+   int baseInt;
+   int headInt;
+   
+   scanf("%d %d",&baseInt,&headInt);
+    int n=4;
+    for (int i = 1; i <n; i++) {
+ 
+        for (int j = 0; j<n; j++) {
+            if(i==3)
+            printf("%d",baseInt);
+            else
+            printf(" ");
+        }
+ 
+        
+        for (int k = 0; k < i; k++) {
+            printf("%d",headInt);
+        }
+        printf("\n");
+    }
+ 
+    for (int i = 0; i < n; i++) {
+        
+       
+        for (int j = 0; j < n; j++) { 
+            
+            if(i==0 || i==1)
+            printf("%d",baseInt);
+            else
+            printf(" ");
+        }
+ 
+        for (int k = 0; k < n - i; k++) {
+            printf("%d",headInt); 
+        }
+        printf("\n");    }
+   
+    return 0;
+
+}
